@@ -1,0 +1,624 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #d0e0f0;
+  display: flex;
+  justify-content: center;
+}
+
+.layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #dfcece;
+  border-radius: 10px 0 0 10px;
+}
+
+.layout_left .paraf1 {
+  color: #414143;
+  letter-spacing: 0.7px;
+  text-align: center;
+}
+
+.layout_right {
+  background: #fff;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #414143;
+}
+
+.layout_right .hello,
+.layout_right .info {
+  align-self: flex-start;
+  color: #9393a3;
+}
+
+.layout_right .hello,
+.layout_right .info {
+  color: inherit;
+}
+
+.layout_right .info a {
+  color: inherit;
+}
+
+.layout_right .info a:hover {
+  color: coral;
+  transition: 0.5s;
+}
+
+.layout_right .info span {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.layout_right span a {
+  text-decoration: none;
+}
+
+.layout_right form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.layout_right input {
+  width: 85%;
+  color: inherit;
+  font-weight: 400;
+  border: 1.5px solid;
+  border-radius: 5px;
+}
+
+.layout_right input::placeholder {
+  padding-left: 5px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  color: #c5c5ca;
+}
+
+.layout_right label {
+  font-weight: 600;
+}
+
+.layout_right .layout_remember_fpassword {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.remember {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.remember label:hover,
+.remember input:hover {
+  cursor: pointer;
+}
+
+.remember label {
+  order: 2;
+}
+
+.remember input {
+  order: 1;
+  background-color: #2196f3;
+}
+
+.fpassword a {
+  text-decoration: none;
+  color: #f44336;
+}
+
+.layout_right .btn_login {
+  background: #dfcece;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.layout_right .btn_login:hover {
+  cursor: pointer;
+}
+
+.line_layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.line_layout .line_right,
+.line_layout .line_left {
+  background: #767676;
+  border-radius: 5px;
+}
+
+.login_sosmed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login_sosmed .btn_google,
+.login_sosmed .btn_fb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  border: 0.6px solid #9393a3;
+  background: transparent;
+}
+
+.login_sosmed .btn_google:hover,
+.login_sosmed .btn_fb:hover {
+  cursor: pointer;
+}
+
+/* ===================================================================================================== */
+/* breakpoint device */
+/* ===================================================================================================== */
+
+/* for mobile */
+@media (max-width: 768px) {
+  .layout {
+    position: relative;
+  }
+  .layout_left {
+    width: 30rem; /* 320px*/
+    height: 40vh;
+    visibility: hidden;
+  }
+
+  /* layout right section */
+  .layout_right {
+    width: 100%; /* 320px*/
+    height: 70vh;
+    position: absolute;
+    border-radius: 10px;
+  }
+
+  .layout_right .hello {
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 30px;
+    margin-top: 48px;
+  }
+
+  .layout_right .info {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    line-height: 25px;
+    margin-left: 30px;
+    width: 390px;
+  }
+
+  .layout_right .info span {
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  .layout_right form {
+    margin-left: 30px;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .layout_right label {
+    font-size: 14px;
+  }
+
+  .layout_right input {
+    height: 40px;
+    font-size: 14px;
+    color: inherit;
+  }
+
+  .layout_right input::placeholder {
+    font-size: 14px;
+  }
+
+  .layout_right .layout_remember_fpassword {
+    padding: 0 30px;
+  }
+
+  .remember {
+    width: 165px;
+    height: 30px;
+  }
+
+  .remember label {
+    font-size: 12px;
+  }
+
+  .remember input {
+    width: 15px;
+    height: 15px;
+  }
+
+  .fpassword a {
+    font-size: 12px;
+  }
+
+  .fpassword {
+    margin-right: 20px;
+  }
+
+  .layout_right .btn_login {
+    width: 85%;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .line_layout {
+    margin-top: 50px;
+  }
+
+  .line_layout .line_right,
+  .line_layout .line_left {
+    width: 145px;
+    height: 3px;
+  }
+
+  .line_layout p {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .login_sosmed {
+    width: 85%;
+    margin-top: 40px;
+    gap: 15px;
+  }
+
+  .login_sosmed .btn_google,
+  .login_sosmed .btn_fb {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .btn_google img,
+  .btn_fb img {
+    width: 20px;
+    height: 20px;
+    margin-top: -5px;
+  }
+}
+
+/* for tablet */
+@media (min-width: 768px) {
+  /* layout left section star */
+  .layout_left {
+    width: 28.125rem; /* 450px*/
+    height: 70vh;
+    visibility: visible;
+  }
+
+  .layout_left .logo {
+    width: 20rem;
+    margin-top: -50px;
+  }
+
+  .layout_left .paraf1 {
+    font-size: 20px;
+    width: 350px;
+    margin-top: -80px;
+  }
+
+  .layout_left .ilus {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 25px;
+  }
+
+  .layout_left .paraf2 {
+    align-self: flex-start;
+    margin: 80px 30px;
+    font-size: 14px;
+  }
+
+  /* layout right section star */
+  .layout_right {
+    width: 28.125rem; /* 450px*/
+    height: 70vh;
+    position: static;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .layout_right .hello {
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 30px;
+    margin-top: 48px;
+  }
+
+  .layout_right .info {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    line-height: 25px;
+    margin-left: 30px;
+    width: 390px;
+  }
+
+  .layout_right .info span {
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  .layout_right form {
+    margin-left: 30px;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .layout_right label {
+    font-size: 14px;
+  }
+
+  .layout_right input {
+    height: 40px;
+    font-size: 14px;
+    color: inherit;
+  }
+
+  .layout_right input::placeholder {
+    font-size: 14px;
+  }
+
+  .layout_right .layout_remember_fpassword {
+    padding: 0 30px;
+  }
+
+  .remember {
+    width: 165px;
+    height: 30px;
+  }
+
+  .remember label {
+    font-size: 12px;
+  }
+
+  .remember input {
+    width: 15px;
+    height: 15px;
+  }
+
+  .fpassword a {
+    font-size: 12px;
+  }
+
+  .fpassword {
+    margin-right: 20px;
+  }
+
+  .layout_right .btn_login {
+    width: 85%;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .line_layout {
+    margin-top: 50px;
+  }
+
+  .line_layout .line_right,
+  .line_layout .line_left {
+    width: 145px;
+    height: 3px;
+  }
+
+  .line_layout p {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .login_sosmed {
+    width: 85%;
+    margin-top: 40px;
+    gap: 15px;
+  }
+
+  .login_sosmed .btn_google,
+  .login_sosmed .btn_fb {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .btn_google img,
+  .btn_fb img {
+    width: 20px;
+    height: 20px;
+    margin-top: -5px;
+  }
+}
+
+/* for dekstop */
+@media (min-width: 992px) {
+  /* bagian layout kiri star */
+  .layout {
+    width: 1440px;
+  }
+  .layout_left {
+    width: 45rem; /* 720px*/
+    height: 89vh;
+  }
+
+  .layout_left .logo {
+    width: 30rem; /* 574px*/
+    margin-top: -110px;
+  }
+
+  .layout_left .paraf1 {
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    width: 450px;
+    line-height: 50px;
+    margin-top: -130px;
+  }
+
+  .paraf2 {
+    align-self: flex-start;
+    margin: 135px 50px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 400;
+  }
+
+  .layout_left .ilus {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 25px;
+  }
+  /* bagian layout kiri end */
+
+  /* ============================================================================= */
+
+  /* bagian layout kanan star */
+  .layout_right {
+    width: 45rem; /* 574px*/
+    height: 89vh;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .layout_right .hello {
+    margin-top: 55px;
+    margin-left: 42px;
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .layout_right .info {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-left: 42px;
+    letter-spacing: 3px;
+    width: 620px;
+    line-height: 38px;
+  }
+
+  .layout_right form {
+    gap: 19px;
+    margin-top: 30px;
+    margin-left: 42px;
+  }
+
+  .layout_right input {
+    height: 50px;
+    padding-left: 5px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+
+  .layout_right input::placeholder {
+    font-size: 16px;
+  }
+
+  .layout_right label {
+    font-size: 16px;
+  }
+
+  .layout_right .layout_remember_fpassword {
+    padding: 0 67px;
+  }
+
+  .remember {
+    width: 141px;
+    height: 50px;
+  }
+
+  .remember input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .fpassword a {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .layout_right .btn_login {
+    width: 550px;
+    padding: 16px 0;
+    font-size: 18px;
+  }
+
+  .line_layout {
+    margin-top: 50px;
+  }
+
+  .line_layout .line_right,
+  .line_layout .line_left {
+    width: 210px;
+    height: 5px;
+  }
+
+  .line_layout p {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
+
+  .login_sosmed {
+    gap: 10px;
+    /* background-color: #2196f3; */
+    width: 550px;
+    height: 100px;
+    margin-top: 80px;
+  }
+
+  .login_sosmed .btn_google,
+  .login_sosmed .btn_fb {
+    padding: 16px 0;
+    font-size: 18px;
+  }
+
+  .btn_google img,
+  .btn_fb img {
+    width: 20px;
+    height: 20px;
+    margin-top: -5px;
+  }
+  /* bagian layout kanan end */
+}
+
+/* for laptop and desktop lebih besar */
+@media (min-width: 1200px) {
+}
