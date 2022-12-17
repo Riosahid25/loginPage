@@ -6,7 +6,6 @@
 }
 
 .container {
-  width: 100%;
   height: 100vh;
   background-color: #d0e0f0;
   display: flex;
@@ -14,6 +13,7 @@
 }
 
 .layout {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,12 +75,12 @@
 .layout_right form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 85%;
   align-self: flex-start;
 }
 
 .layout_right input {
-  width: 85%;
+  width: 100%;
   color: inherit;
   font-weight: 400;
   border: 1.5px solid;
@@ -103,10 +103,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 25px;
+  margin-top: -1%;
 }
 
-.remember {
+.layout_right .remember {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,7 +159,7 @@
   border-radius: 5px;
 }
 
-.login_sosmed {
+.layout_right .login_sosmed {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -321,25 +321,25 @@
 @media (min-width: 768px) {
   /* layout left section star */
   .layout_left {
-    width: 28.125rem; /* 450px*/
+    width: 40%; /* 450px*/
     height: 70vh;
     visibility: visible;
   }
 
   .layout_left .logo {
-    width: 20rem;
-    margin-top: -50px;
+    width: 65%;
+    margin-top: -10%;
   }
 
   .layout_left .paraf1 {
-    font-size: 20px;
-    width: 350px;
-    margin-top: -80px;
+    font-size: 105%;
+    width: 68%;
+    margin-top: -18%;
   }
 
   .layout_left .ilus {
-    width: 20rem;
-    height: 20rem;
+    width: 75%;
+    height: 75%;
     margin-top: 25px;
   }
 
@@ -351,39 +351,39 @@
 
   /* layout right section star */
   .layout_right {
-    width: 28.125rem; /* 450px*/
-    height: 70vh;
+    width: 40%; /* 450px*/
+    height: 70%;
     position: static;
     border-radius: 0 10px 10px 0;
   }
 
   .layout_right .hello {
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 900;
     margin-left: 30px;
-    margin-top: 48px;
+    margin-top: 15%;
   }
 
   .layout_right .info {
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 400;
-    margin-top: 10px;
+    margin-top: 5px;
     letter-spacing: 2px;
-    line-height: 25px;
+    line-height: 18px;
     margin-left: 30px;
-    width: 390px;
+    width: 85%;
   }
 
   .layout_right .info span {
-    font-size: 14px;
+    font-size: 10px;
     letter-spacing: 1px;
     font-weight: 600;
   }
 
   .layout_right form {
     margin-left: 30px;
-    gap: 15px;
-    margin-top: 30px;
+    gap: 12px;
+    margin-top: 25px;
   }
 
   .layout_right label {
@@ -471,40 +471,38 @@
 /* for dekstop */
 @media (min-width: 992px) {
   /* bagian layout kiri star */
-  .layout {
-    width: 1440px;
-  }
+
   .layout_left {
-    width: 45rem; /* 720px*/
-    height: 89vh;
+    width: 40%; /* 720px*/
+    /* height: 89vh; */
   }
 
   .layout_left .logo {
-    width: 30rem; /* 574px*/
-    margin-top: -110px;
+    width: 65%; /* 574px*/
+    margin-top: -18%;
   }
 
   .layout_left .paraf1 {
-    font-size: 35px;
+    font-size: 150%;
     font-weight: 400;
     text-align: center;
-    width: 450px;
-    line-height: 50px;
-    margin-top: -130px;
+    width: 60%;
+    line-height: 40px;
+    margin-top: -18%;
   }
 
-  .paraf2 {
+  .layout_left .paraf2 {
     align-self: flex-start;
-    margin: 135px 50px;
-    font-size: 14px;
+    margin: -10px 50px;
+    font-size: 87.5%;
     letter-spacing: 3px;
     font-weight: 400;
   }
 
   .layout_left .ilus {
-    width: 20rem;
-    height: 20rem;
-    margin-top: 25px;
+    width: 60%;
+    height: 60%;
+    margin-top: -25px;
   }
   /* bagian layout kiri end */
 
@@ -512,82 +510,86 @@
 
   /* bagian layout kanan star */
   .layout_right {
-    width: 45rem; /* 574px*/
-    height: 89vh;
+    width: 40%; /* 574px*/
+    height: 70%;
     border-radius: 0 10px 10px 0;
   }
 
   .layout_right .hello {
-    margin-top: 55px;
+    margin-top: 10%;
     margin-left: 42px;
-    font-size: 30px;
+    font-size: 16px;
     font-weight: 900;
   }
 
   .layout_right .info {
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 400;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 42px;
     letter-spacing: 3px;
-    width: 620px;
-    line-height: 38px;
+    width: 85%;
+    line-height: 20px;
+  }
+
+  .layout_right .info span {
+    font-size: 12px;
   }
 
   .layout_right form {
-    gap: 19px;
-    margin-top: 30px;
+    gap: 15px;
+    margin-top: 20px;
     margin-left: 42px;
   }
 
   .layout_right input {
-    height: 50px;
+    height: 30px;
     padding-left: 5px;
-    font-size: 20px;
+    font-size: 12px;
     letter-spacing: 1.5px;
   }
 
   .layout_right input::placeholder {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .layout_right label {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .layout_right .layout_remember_fpassword {
-    padding: 0 67px;
+    padding: 0 10%;
   }
 
-  .remember {
+  .layout_right .remember {
     width: 141px;
     height: 50px;
   }
 
   .remember input {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
 
   .fpassword a {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .layout_right .btn_login {
-    width: 550px;
-    padding: 16px 0;
-    font-size: 18px;
+    width: 85%;
+    padding: 3% 0;
+    font-size: 16px;
   }
 
   .line_layout {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .line_layout .line_right,
   .line_layout .line_left {
-    width: 210px;
-    height: 5px;
+    width: 130px;
+    height: 3px;
   }
 
   .line_layout p {
@@ -596,24 +598,23 @@
     letter-spacing: 1.5px;
   }
 
-  .login_sosmed {
+  .layout_right .login_sosmed {
     gap: 10px;
-    /* background-color: #2196f3; */
-    width: 550px;
-    height: 100px;
-    margin-top: 80px;
+    width: 85%;
+    /* height: 100px; */
+    margin-top: 20px;
   }
 
   .login_sosmed .btn_google,
   .login_sosmed .btn_fb {
-    padding: 16px 0;
-    font-size: 18px;
+    padding: 3% 0;
+    font-size: 16px;
   }
 
   .btn_google img,
   .btn_fb img {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     margin-top: -5px;
   }
   /* bagian layout kanan end */
