@@ -1,8 +1,22 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  /* for the color */
+  --primary-color1: #dfcece;
+  --primary-color2: #b16668;
+  --primary-color3: #9393a3;
+  --primary-color4: #414143;
+
+  /* for the font */
+  --font-family-primary: "Playfair Display", serif;
+  --font-family-sekundary: "Work Sans", sans-serif;
 }
 
 .container {
@@ -23,7 +37,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #dfcece;
+  justify-content: center;
+  background: var(--primary-color1);
   border-radius: 10px 0 0 10px;
 }
 
@@ -133,7 +148,7 @@
 }
 
 .layout_right .btn_login {
-  background: #dfcece;
+  background: var(--primary-color2);
   color: white;
   font-weight: 600;
   letter-spacing: 2px;
@@ -161,20 +176,21 @@
 
 .layout_right .login_sosmed {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .login_sosmed .btn_google,
 .login_sosmed .btn_fb {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
+  /* gap: 10px; */
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   border-radius: 5px;
-  border: 0.6px solid #9393a3;
+  border: 0.5px solid #9393a3;
   background: transparent;
 }
 
@@ -187,7 +203,32 @@
 /* breakpoint device */
 /* ===================================================================================================== */
 /* for mobile s */
-@media (max-width: 465px) {
+@media (max-width: 618px) {
+  .layout_right .layout_remember_fpassword {
+    margin-left: 35px;
+  }
+
+  .layout_right .btn_login {
+    margin-left: 20px;
+  }
+
+  .line_layout {
+    width: 80%;
+    margin-left: -12px;
+  }
+
+  .layout .layout_right .login_sosmed {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .layout_right .login_sosmed .btn_google,
+  .layout_right .login_sosmed .btn_fb {
+    width: 110%;
+    padding: 10px 30%;
+  }
 }
 
 /* for mobile xs */
@@ -211,14 +252,15 @@
   }
 
   .layout_right .hello {
-    font-size: 16px;
+    font-size: 35px;
     font-weight: 900;
     margin-left: 30px;
     margin-top: 48px;
+    text-transform: capitalize;
   }
 
   .layout_right .info {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
     margin-top: 10px;
     letter-spacing: 2px;
@@ -227,14 +269,18 @@
     width: 88%;
   }
 
-  .layout_right .info span {
-    font-size: 12px;
+  .layout_right span {
+    font-size: 14px;
     letter-spacing: 1px;
     font-weight: 600;
+    margin-top: 30px;
+    color: var(--primary-color3);
   }
 
-  .layout_right .info span a {
-    font-size: 12px;
+  .layout_right span a {
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--primary-color4);
   }
 
   .layout_right form {
@@ -244,7 +290,7 @@
   }
 
   .layout_right label {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .layout_right input {
@@ -258,8 +304,8 @@
   }
 
   .layout_right .layout_remember_fpassword {
-    padding: 5% 10%;
-    margin: 0 30px;
+    padding: 5% 0;
+    /* margin: 0 30px; */
   }
 
   .remember {
@@ -278,6 +324,7 @@
 
   .fpassword a {
     font-size: 12px;
+    margin-right: 46px;
   }
 
   .fpassword {
@@ -286,18 +333,19 @@
 
   .layout_right .btn_login {
     width: 85%;
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px 0;
-    margin-left: -5%;
+    margin-right: 30px;
+    margin-top: -10px;
   }
 
   .line_layout {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .line_layout .line_right,
   .line_layout .line_left {
-    width: 155px;
+    width: 185px;
     height: 3px;
   }
 
@@ -305,26 +353,30 @@
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
+    text-transform: lowercase;
   }
 
-  .login_sosmed {
-    width: 80%;
-    margin-top: 40px;
-    gap: 15px;
+  .layout_right .login_sosmed {
+    width: 100%;
+    margin-top: 30px;
+    /* gap: 5px; */
+    padding: 0 70px;
   }
 
   .login_sosmed .btn_google,
   .login_sosmed .btn_fb {
-    padding: 10px 0;
-    font-size: 16px;
-    margin-left: -5%;
+    padding: 10px 30px;
+    font-size: 12px;
+    width: 50%;
+    margin-left: -7%;
+    color: var(--primary-color3);
   }
 
   .btn_google img,
   .btn_fb img {
-    width: 20px;
-    height: 20px;
-    margin-top: -5px;
+    width: 16px;
+    height: 16px;
+    margin-top: -3px;
   }
 }
 
@@ -338,21 +390,21 @@
   }
 
   .layout_left .logo {
-    width: 85%;
-    margin-top: -10%;
+    width: 80%;
+    margin-top: 15%;
   }
 
   .layout_left .paraf1 {
-    font-size: 135%;
+    font-size: 20px;
     width: 78%;
-    margin-top: -25%;
-    line-height: 30px;
+    margin-top: 5%;
+    line-height: 28px;
   }
 
   .layout_left .ilus {
-    width: 85%;
+    width: 90%;
     height: 65%;
-    margin-top: 5%;
+    margin-top: -12%;
     /* background-color: #2196f3; */
   }
 
@@ -371,40 +423,51 @@
   }
 
   .layout_right .hello {
-    font-size: 70%;
+    font-size: 30px;
     font-weight: 900;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 20%;
+    text-transform: capitalize;
+    color: var(--primary-color4);
   }
 
   .layout_right .info {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
     margin-top: 5px;
     letter-spacing: 2px;
     line-height: 18px;
-    margin-left: 30px;
-    width: 85%;
+    margin-left: 20px;
+    width: 90%;
+    color: var(--primary-color3);
   }
 
-  .layout_right .info span {
-    font-size: 10px;
+  .layout_right span {
+    font-size: 12px;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 500;
+    margin-top: 20px;
+    color: var(--primary-color4);
+  }
+
+  .layout_right span a {
+    font-weight: 800;
   }
 
   .layout_right form {
-    margin-left: 30px;
+    margin-left: 20px;
     gap: 15px;
     margin-top: 8%;
+    width: 90%;
   }
 
   .layout_right label {
     font-size: 12px;
+    color: var(--primary-color4);
   }
 
   .layout_right input {
-    height: 30px;
+    height: 35px;
     font-size: 14px;
     color: inherit;
   }
@@ -414,7 +477,8 @@
   }
 
   .layout_right .layout_remember_fpassword {
-    padding: 5% 2%;
+    padding: 5% 0;
+    margin-left: -38px;
   }
 
   .remember {
@@ -424,6 +488,7 @@
 
   .remember label {
     font-size: 10px;
+    color: var(--primary-color3);
   }
 
   .remember input {
@@ -435,50 +500,51 @@
     font-size: 10px;
   }
 
-  .fpassword {
-    margin-right: 20px;
-  }
-
   .layout_right .btn_login {
-    width: 85%;
-    font-size: 14px;
+    width: 90%;
+    font-size: 12px;
     padding: 10px 0;
+    margin-top: -6px;
     margin-left: 10px;
   }
 
   .line_layout {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .line_layout .line_right,
   .line_layout .line_left {
-    width: 100px;
-    height: 3px;
+    width: 105px;
+    height: 1px;
+    color: var(--primary-color3);
   }
 
   .line_layout p {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
+    text-transform: lowercase;
   }
 
   .login_sosmed {
-    width: 85%;
+    width: 90%;
     margin-top: 20px;
-    gap: 15px;
+    gap: 10px;
+    /* padding: 0 10px; */
   }
 
   .login_sosmed .btn_google,
   .login_sosmed .btn_fb {
-    padding: 10px 0;
-    font-size: 12px;
+    padding: 4% 6px;
+    font-size: 9px;
+    color: var(--primary-color3);
   }
 
   .btn_google img,
   .btn_fb img {
-    width: 20px;
-    height: 20px;
-    margin-top: -5px;
+    width: 16px;
+    height: 16px;
+    margin-top: -3px;
   }
 }
 
@@ -492,8 +558,8 @@
   }
 
   .layout_left .logo {
-    width: 85%; /* 574px*/
-    margin-top: -12%;
+    width: 80%; /* 574px*/
+    margin-top: 10%;
   }
 
   .layout_left .paraf1 {
@@ -502,7 +568,7 @@
     text-align: center;
     width: 70%;
     line-height: 30px;
-    margin-top: -25%;
+    margin-top: 3%;
   }
 
   .layout_left .paraf2 {
@@ -530,30 +596,42 @@
   }
 
   .layout_right .hello {
-    margin-top: 10%;
-    margin-left: 42px;
-    font-size: 100%;
+    margin-top: 15%;
+    /* margin-left: 42px; */
+    font-size: 35px;
     font-weight: 900;
+    font-family: var(--font-family-primary);
+    text-transform: capitalize;
   }
 
   .layout_right .info {
     font-size: 12px;
     font-weight: 400;
-    margin-top: 10px;
-    margin-left: 42px;
+    margin-top: 5px;
+    /* margin-left: 42px; */
     letter-spacing: 3px;
-    width: 85%;
+    width: 100%;
     line-height: 20px;
+    font-family: var(--font-family-sekundary);
   }
 
-  .layout_right .info span {
-    font-size: 12px;
+  .layout_right span {
+    font-size: 14px;
+    margin-top: 28px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: var(--primary-color3);
+  }
+
+  .layout_right span a {
+    font-weight: 800;
+    color: var(--primary-color4);
   }
 
   .layout_right form {
     gap: 15px;
     margin-top: 20px;
-    margin-left: 42px;
+    /* margin-left: 42px; */
   }
 
   .layout_right input {
@@ -561,6 +639,7 @@
     padding-left: 5px;
     font-size: 16px;
     letter-spacing: 1.5px;
+    font-family: var(--font-family-sekundary);
   }
 
   .layout_right input::placeholder {
@@ -569,15 +648,25 @@
 
   .layout_right label {
     font-size: 14px;
+    font-family: var(--font-family-sekundary);
+    /* letter-spacing: 2px; */
+    font-weight: 400;
   }
 
   .layout_right .layout_remember_fpassword {
-    padding: 5% 10%;
+    padding: 10px 3%;
+    margin-left: 4px;
   }
 
   .layout_right .remember {
     width: 141px;
     height: 50px;
+  }
+
+  .remember label {
+    font-size: 12px;
+    margin-right: 20px;
+    color: var(--primary-color4);
   }
 
   .remember input {
@@ -586,50 +675,58 @@
   }
 
   .fpassword a {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 12px;
+    margin-right: 15px;
   }
 
   .layout_right .btn_login {
-    width: 85%;
+    /* width: 85%; */
     padding: 3% 0;
-    font-size: 125%;
+    font-size: 14px;
+    /* margin-right: 33px; */
+    margin-left: -3px;
   }
 
   .line_layout {
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-left: -25px;
   }
 
   .line_layout .line_right,
   .line_layout .line_left {
     width: 130px;
-    height: 3px;
+    height: 1px;
   }
 
   .line_layout p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 1.5px;
+    text-transform: lowercase;
   }
 
   .layout_right .login_sosmed {
-    gap: 18px;
-    width: 85%;
+    gap: 15px;
     /* height: 100px; */
-    margin-top: 50px;
+    margin-top: 30px;
+    /* margin-left: -16px; */
+    width: 90%;
   }
 
   .login_sosmed .btn_google,
   .login_sosmed .btn_fb {
-    padding: 4% 0;
-    font-size: 16px;
+    padding: 4% 12px;
+    font-size: 11px;
+    border: 0.5px solid var(--primary-color3);
+    color: var(--primary-color3);
   }
 
   .btn_google img,
   .btn_fb img {
     width: 16px;
     height: 16px;
-    margin-top: -5px;
+    margin-top: -3px;
   }
   /* bagian layout kanan end */
 }
@@ -643,19 +740,76 @@
   }
 
   .layout_left .logo {
-    width: 60%;
-    margin-top: -12%;
+    width: 80%;
+    margin-top: 5%;
   }
 
   .layout_left .paraf1 {
     font-size: 165%;
     line-height: 30px;
-    margin-top: -15%;
+    /* margin-top: 5%; */
+  }
+
+  .layout_left .ilus {
+    margin-top: 15px;
   }
 
   /* for layout right section */
   .layout_right {
     width: 40%;
     height: 85%;
+  }
+
+  .layout_right .layout_remember_fpassword {
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+  .layout_right .remember {
+    width: 150px;
+  }
+
+  .layout_right .remember label {
+    font-size: 14px;
+  }
+
+  .fpassword a {
+    margin-right: 35px;
+    font-size: 14px;
+  }
+  .layout_right .btn_login {
+    margin-right: 50px;
+    margin-left: 28px;
+  }
+
+  .line_layout {
+    margin-left: -35px;
+  }
+
+  .line_layout .line_left,
+  .line_layout .line_right {
+    width: 190px;
+  }
+
+  .layout_right .login_sosmed {
+    margin-left: -20px;
+    width: 90%;
+    gap: 15px;
+  }
+
+  .login_sosmed .btn_google,
+  .login_sosmed .btn_fb {
+    font-size: 14px;
+    padding: 4% 30px;
+  }
+
+  .layout_right span {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 35px;
+  }
+
+  .layout_right span a {
+    font-weight: 800;
   }
 }
