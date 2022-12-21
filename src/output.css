@@ -203,118 +203,197 @@
 /* ===================================================================================================== */
 /* breakpoint device */
 /* ===================================================================================================== */
-/* for mobile l  */
-@media (max-width: 425px) {
-  div.layout .layout_right {
-    height: 75vh;
+
+/* for mobile extra small */
+@media (max-width: 576px) {
+  .layout {
+    position: relative;
+    overflow: hidden;
+  }
+  .layout_left {
+    width: 30rem; /* 320px*/
+    height: 40vh;
+    visibility: hidden;
+  }
+
+  /* layout right section */
+  .layout .layout_right {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    border-radius: 10px;
   }
 
   .layout .layout_right .hello {
-    font-size: 20px;
-    margin-top: 50px;
+    font-size: 25px;
+    font-weight: 900;
+    margin-left: 30px;
+    margin-top: 70px;
+    text-transform: capitalize;
   }
 
   .layout .layout_right .info {
     font-size: 14px;
-  }
-
-  .layout .layout_right form {
-    gap: 15px;
-    margin-top: 30px;
-  }
-
-  .layout_right form label {
-    font-size: 12px;
-  }
-
-  .layout_right form input {
-    height: 35px;
-  }
-
-  .layout form input::placeholder {
-    font-size: 10px;
-  }
-
-  .layout .layout_right .layout_remember_fpassword {
-    margin-left: 65px;
+    font-weight: 400;
     margin-top: 10px;
-  }
-
-  .layout .layout_right .remember {
-    width: 110px;
-    font-family: var(--font-family-sekundary);
-  }
-
-  .layout .layout_right .fpassword {
-    font-family: var(--font-family-sekundary);
-  }
-
-  .layout .layout_right .btn_login {
-    margin-left: 35px;
-    margin-top: 10px;
-  }
-
-  .layout .layout_right .line_layout {
-    margin-left: 7px;
-  }
-
-  .layout .layout_right .login_sosmed {
-    margin-left: -45px;
-  }
-
-  div.layout .layout_right .btn_google,
-  div.layout .layout_right .btn_fb {
-    width: 138%;
-    padding: 10px 60px;
-    font-size: 75%;
+    letter-spacing: 2px;
+    line-height: 25px;
+    margin-left: 30px;
+    width: 88%;
   }
 
   .layout .layout_right span {
-    font-family: var(--font-family-sekundary);
-    font-size: 12px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 30px;
+    color: var(--primary-color3);
   }
 
   .layout .layout_right span a {
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--primary-color4);
   }
-}
 
-/* for mobile xl 2  */
-@media (max-width: 618px) {
-  .layout .layout_right {
-    height: 85vh;
+  .layout_right form {
+    margin-left: 30px;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .layout .layout_right label {
+    font-size: 14px;
+  }
+
+  .layout .layout_right input {
+    height: 40px;
+    font-size: 14px;
+    color: inherit;
+  }
+
+  .layout .layout_right input::placeholder {
+    font-size: 12px;
   }
 
   .layout_right .layout_remember_fpassword {
-    margin-left: 35px;
+    padding: 5% 0;
+    /* margin: 0 30px; */
+  }
+
+  .remember {
+    width: 25%;
+    height: 30px;
+  }
+
+  .layout .remember label {
+    font-size: 12px;
+  }
+
+  .remember input {
+    width: 15px;
+    height: 15px;
+  }
+
+  .fpassword a {
+    font-size: 12px;
+    margin-right: 46px;
+  }
+
+  .fpassword {
+    margin-right: 20px;
   }
 
   .layout_right .btn_login {
-    margin-left: 20px;
+    width: 85%;
+    font-size: 14px;
+    padding: 10px 0;
+    margin-right: 30px;
+    margin-top: -10px;
   }
 
   .line_layout {
-    width: 80%;
-    margin-left: -12px;
+    margin-top: 30px;
+  }
+
+  .container .layout .line_layout .line_right,
+  .container .layout .line_layout .line_left {
+    width: 100px;
+    height: 3px;
+  }
+
+  .line_layout p {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: lowercase;
   }
 
   .layout .layout_right .login_sosmed {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    margin-top: 20px;
     gap: 10px;
+    padding: 0 70px;
+    flex-direction: column;
   }
 
-  .layout_right .login_sosmed .btn_google,
-  .layout_right .login_sosmed .btn_fb {
-    width: 110%;
-    padding: 10px 30%;
-    font-family: var(--font-family-sekundary);
+  .container .layout .login_sosmed .btn_google,
+  .container .layout .login_sosmed .btn_fb {
+    padding: 10px 37%;
+    font-size: 12px;
+    width: 120%;
+    margin-left: -30px;
+    color: var(--primary-color3);
+    font-family: var(--font-family-primary);
+  }
+
+  .btn_google img,
+  .btn_fb img {
+    width: 16px;
+    height: 16px;
+    margin-top: -3px;
+  }
+
+  .layout .layout_right .layout_remember_fpassword {
+    margin-left: 50px;
+  }
+
+  .layout .layout_right .btn_login {
+    margin-left: 20px;
+  }
+
+  .layout .layout_right .line_right,
+  .layout .layout_right .line_left {
+    width: 150px;
+  }
+
+  .layout .layout_right .login_sosmed {
+    margin-left: 15px;
+  }
+
+  .layout .layout_right .btn_fb,
+  .layout .layout_right .btn_google {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .layout .layout_right .btn_fb img,
+  .layout .layout_right .btn_google img {
+    width: 11px;
+    height: 11px;
+  }
+
+  .layout .layout_right span {
+    font-size: 12px;
+    margin: 15px;
+  }
+  .layout .layout_right span a {
+    font-size: 10px;
   }
 }
 
-/* for mobile xl 1 */
-@media (max-width: 767px) {
+/* for mobile sm */
+@media (min-width: 576px) {
   .layout {
     position: relative;
     overflow: hidden;
@@ -443,6 +522,7 @@
     margin-top: 30px;
     /* gap: 5px; */
     padding: 0 70px;
+    flex-wrap: wrap;
   }
 
   .login_sosmed .btn_google,
@@ -463,7 +543,7 @@
   }
 }
 
-/* for tablet */
+/* for tablet md */
 @media (min-width: 768px) {
   /* layout left section star */
   .layout_left {
@@ -633,7 +713,7 @@
   }
 }
 
-/* for dekstop */
+/* for dekstop large */
 @media (min-width: 992px) {
   /* bagian layout kiri star */
 
@@ -818,7 +898,7 @@
   /* bagian layout kanan end */
 }
 
-/* for laptop and desktop lebih besar */
+/* for desktop extra large */
 @media (min-width: 1200px) {
   /* for layout left section */
   .layout_left {
@@ -858,11 +938,13 @@
 
   .layout_right .remember label {
     font-size: 14px;
+    font-family: var(--font-family-sekundary);
   }
 
   .fpassword a {
     margin-right: 35px;
     font-size: 14px;
+    font-family: var(--font-family-sekundary);
   }
   .layout_right .btn_login {
     margin-right: 50px;
@@ -895,9 +977,14 @@
     font-size: 16px;
     font-weight: 500;
     margin-top: 35px;
+    font-family: var(--font-family-sekundary);
   }
 
   .layout_right span a {
     font-weight: 800;
   }
+}
+
+/* for desktop xxlarge */
+@media (min-width: 1400px) {
 }
