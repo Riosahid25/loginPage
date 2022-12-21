@@ -231,13 +231,22 @@
     height: 35px;
   }
 
+  .layout form input::placeholder {
+    font-size: 10px;
+  }
+
   .layout .layout_right .layout_remember_fpassword {
     margin-left: 65px;
     margin-top: 10px;
   }
 
   .layout .layout_right .remember {
-    width: 100px;
+    width: 110px;
+    font-family: var(--font-family-sekundary);
+  }
+
+  .layout .layout_right .fpassword {
+    font-family: var(--font-family-sekundary);
   }
 
   .layout .layout_right .btn_login {
@@ -258,6 +267,15 @@
     width: 138%;
     padding: 10px 60px;
     font-size: 75%;
+  }
+
+  .layout .layout_right span {
+    font-family: var(--font-family-sekundary);
+    font-size: 12px;
+  }
+
+  .layout .layout_right span a {
+    font-size: 12px;
   }
 }
 
